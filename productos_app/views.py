@@ -3,4 +3,4 @@ from django.contrib.auth.decorators import login_required
 
 @login_required
 def welcome(request):
-    return render(request, 'aplicacion1/welcome.html')
+    return render(request, 'productos_app/welcome.html')
