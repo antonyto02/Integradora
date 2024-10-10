@@ -24,6 +24,8 @@
         <form method="POST" action="{% url 'logout' %}"
             class="absolute top-2 right-2 cursor-pointer transform hover:translate-y-1"
         >
+            {% csrf_token %}
+
             <img
             src="https://i.postimg.cc/yNG8SS4L/Logout.png"
             alt="Log Out Icon"
