@@ -17,7 +17,7 @@
     >
       <div class="p-5">
         <img
-          src="https://i.postimg.cc/43tGt9nM/img-login.png"
+          src="https://i.postimg.cc/Hk0Z17bJ/logopng2.png"
           alt="La Barbacha"
           class="w-32"
         />
@@ -42,39 +42,28 @@
     </div>
 
     <!-- Contenedor de botones -->
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12 px-6 lg:px-24">
-      <!-- Botón Productos -->
-      <div class="flex flex-col items-center bg-white shadow-lg rounded-lg p-6">
-        <div class="text-6xl mb-4 text-yellow-700">
-          <i class="fas fa-boxes"></i>
-          <!-- Icono (puedes cambiar el ícono según corresponda) -->
-        </div>
-        <div class="bg-[#7B281C] text-black w-full text-center py-2 rounded-lg">
-          <a href="#" class="text-xl font-bold">PRODUCTOS</a>
-        </div>
-      </div>
-
-      <!-- Botón Empleados -->
-      <div class="flex flex-col items-center bg-white shadow-lg rounded-lg p-6">
-        <div class="text-6xl mb-4 text-yellow-700">
-          <i class="fas fa-users"></i>
-          <!-- Icono de empleados -->
-        </div>
-        <div class="bg-[#7B281C] text-black w-full text-center py-2 rounded-lg">
-          <a href="#" class="text-xl font-bold">EMPLEADOS</a>
-        </div>
-      </div>
-
-      <!-- Botón Proveedores -->
-      <div class="flex flex-col items-center bg-white shadow-lg rounded-lg p-6">
-        <div class="text-6xl mb-4 text-yellow-700">
-          <i class="fas fa-truck"></i>
-          <!-- Icono de proveedores -->
-        </div>
-        <div class="bg-[#7B281C] text-black w-full text-center py-2 rounded-lg">
-          <a href="#" class="text-xl font-bold">PROVEEDORES</a>
-        </div>
-      </div>
+    <main class="container mx-auto">
+        <div class="flex justify-center gap-24 flex-wrap mt-5">
+          <!-- Tarjeta de Productos -->
+          <div class="bg-white rounded-lg shadow-lg p-8 text-center cursor-pointer border hover:-translate-y-2 transition-transform duration-300 border-[#7b281c]" onclick="redirectTo('productos.html')">
+            <img src="assets/images/Menu_principal/food.png" alt="Productos" class="w-30 mb-4" />
+            <p class="text-lg font-bold text-[#734f2b] font-jura">PRODUCTOS</p>
+          </div>
+      
+          <!-- Tarjeta de Empleados -->
+          <div class="bg-white rounded-lg shadow-lg p-8 text-center cursor-pointer border hover:-translate-y-2 transition-transform duration-300 border-[#7b281c]" onclick="redirectTo('empleados.html')">
+            <img src="assets/images/Menu_principal/personas.png" alt="Empleados" class="w-30 mb-4" />
+            <p class="text-lg font-bold text-[#734f2b] font-jura">EMPLEADOS</p>
+          </div>
+      
+          <!-- Tarjeta de Proveedores -->
+          <div class="bg-white rounded-lg shadow-lg p-8 text-center cursor-pointer border hover:-translate-y-2 transition-transform duration-300 border-[#7b281c]" onclick="redirectTo('proveedores.html')">
+            <img src="assets/images/Menu_principal/camion.png" alt="Proveedores" class="w-30 mb-4" />
+            <p class="text-lg font-bold text-[#734f2b] font-jura">PROVEEDORES</p>
+          </div>
+        </div>
+      </main>
+      
     </div>
   </body>
 </html>
