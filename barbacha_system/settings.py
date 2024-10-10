@@ -123,7 +123,7 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-LOGIN_REDIRECT_URL = '/welcome/'  # Redirecciona a esta URL después del login exitoso
+LOGIN_REDIRECT_URL = '/menu_principal/'  # Redirecciona a esta URL después del login exitoso
 
 LOGIN_URL = '/login/'
 
