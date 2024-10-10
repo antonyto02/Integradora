@@ -15,16 +15,18 @@
       class="w-full h-64 bg-cover bg-center"
       style="background-image: url('https://i.postimg.cc/MHsfYQ37/pancho.png')"
     >
-      <div class="p-5">
-        <img
+
+        <form method="POST" class="p-5" action="{% url 'logout' %}">
+            {% csrf_token %}
+            <img
           src="https://i.postimg.cc/Hk0Z17bJ/logopng2.png"
           alt="La Barbacha"
-          class="w-32"
+          class="max-w-[170px]"
         />
-      </div>
+        </form>
+
       <div
         class="absolute top-2 right-2 cursor-pointer transform hover:translate-y-1"
-        onclick="logout()"
       >
         <img
           src="https://i.postimg.cc/yNG8SS4L/Logout.png"
@@ -42,22 +44,22 @@
     </div>
 
     <!-- Contenedor de botones -->
-    <main class="container mx-auto">
+    <main class="container mx-auto ">
         <div class="flex justify-center gap-24 flex-wrap mt-5">
           <!-- Tarjeta de Productos -->
-          <div class="card onclick=redirectTo('productos.html')">
+          <div class="flex justify-center card onclick=redirectTo('{% url 'productos' %}')">
             <img src="https://i.postimg.cc/Z5SGVPhW/food.png" alt="Productos" class="w-30 mb-4" />
             <p class="text-lg font-bold text-[#734f2b] font-jura">PRODUCTOS</p>
           </div>
       
           <!-- Tarjeta de Empleados -->
-          <div class="card onclick=redirectTo('empleados.html')">
+          <div class="flex justify-center card onclick=redirectTo('{% url 'empleados' %}')">
             <img src="https://i.postimg.cc/B6rYtsSj/personas.png" alt="Empleados" class="w-30 mb-4" />
             <p class="text-lg font-bold text-[#734f2b] font-jura">EMPLEADOS</p>
           </div>
       
           <!-- Tarjeta de Proveedores -->
-          <div class="card onclick=redirectTo('proveedores.html')">
+          <div class="flex justify-center card onclick=redirectTo('{% url 'proveedores' %}')">
             <img src="https://i.postimg.cc/GpnZgFwB/camion.png" alt="Proveedores" class="w-30 mb-4" />
             <p class="text-lg font-bold text-[#734f2b] font-jura">PROVEEDORES</p>
           </div>
@@ -100,4 +102,15 @@
   font-weight: bold;
   color: #734f2b;
 }
+
+main h1 {
+  margin: 20px 0;
+  font-size: 3rem;
+  color: #d07e0e;
+  font-family: "Times New Roman", Times, serif, sans-serif;
+  text-shadow: -2px 2px 15px rgba(83, 83, 83, 0.782);
+}
+.font-jura {
+                  font-family: "Jura", sans-serif;
+                }
 </style>
