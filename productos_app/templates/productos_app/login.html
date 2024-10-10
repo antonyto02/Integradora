@@ -1,17 +1,116 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Iniciar sesión</title>
-</head>
-<body>
-    <h2>Iniciar sesión</h2>
-    <form method="post">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit">Iniciar sesión</button>
-    </form>
-</body>
-</html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>La Barbacha - Login</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bevan:ital@0;1&family=Jura:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/@heroicons/react/outline"></script>
+  </head>
+  <body class="bg-gray-200">
+    <div class="flex min-h-screen items-center justify-center">
+      <div
+        class="flex flex-col md:flex-row bg-[#D8D5D2] shadow-lg rounded-lg overflow-hidden w-full h-[100vh]"
+      >
+        <!-- Imagen del restaurante con borde redondeado a la derecha -->
+        <div class="w-[60%] md:w-1/2 relative">
+          <img
+            src="assets/images/Inicio_sesion/sombra.png"
+            class="top-0 left-0 h-full w-full object-cover rounded-r-full opacity-50"
+            alt="Restaurante"
+          />
+          <img
+            src="https://i.postimg.cc/43tGt9nM/img-login.png"
+            alt="Restaurante La Barbacha"
+            class="absolute top-0 left-0 h-[100vh] w-[98.9%] object-cover rounded-r-full"
+          />
+        </div>
 
+        <!-- Formulario de login -->
+        <div class="w-[50%] md:w-1/2 p-8 flex flex-col justify-center">
+          <div class="text-center mb-6">
+            <img
+              src="assets/images/Inicio_sesion/logopng2.png"
+              alt="Logo La Barbacha"
+              class="mx-auto mb-4 h-[40vh]"
+            />
+          </div>
+          <form class="space-y-6">
+            {% csrf_token %}
+            <div>
+              <label
+                for="usuario"
+                class="block text-sm font-medium text-gray-700 font-Bevan"
+                >USUARIO</label
+              >
+
+              <input
+                id="usuario"
+                name="usuario"
+                type="text"
+                placeholder='"Ingrese Usuario"'
+                required
+                class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:ring-brown-500 focus:border-brown-500 sm:text-sm"
+              />
+            </div>
+
+            <div class="relative">
+              <label
+                for="contrasena"
+                class="block text-sm font-medium text-gray-700"
+                >CONTRASEÑA</label
+              >
+              <div class="relative">
+                <input
+                  id="password"
+                  name="contrasena"
+                  type="password"
+                  placeholder="Ingrese Contraseña"
+                  required
+                  class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:ring-brown-500 focus:border-brown-500 sm:text-sm"
+                />
+                <button
+                  id="togglePassword"
+                  type="button"
+                  class="absolute inset-y-2 right-0 pr-3 flex items-center"
+                >
+                  <svg
+                    id="eyeIcon"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-5 w-5 text-gray-500"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                  >
+                    <path
+                      d="M10 3C6 3 2.73 5.11 1.14 8.25a1 1 0 000 .77C2.73 12.89 6 15 10 15c4 0 7.27-2.11 8.86-5.25a1 1 0 000-.77C17.27 5.11 14 3 10 3zM10 13a3 3 0 110-6 3 3 0 010 6zm0-4a1 1 0 100 2 1 1 0 000-2z"
+                    />
+                  </svg>
+                </button>
+              </div>
+              <script src="assets/scripts/login.js"></script>
+            </div>
+
+            <div class="flex items-center justify-center">
+              <button
+                type="submit"
+                class="w-[200px] py-2 px-4 bg-[#362416] text-white font-semibold rounded-lg shadow-md hover:bg-brown-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brown-500 justify-center"
+              >
+                Iniciar Sesión
+              </button>
+            </div>
+          </form>
+          <p class="mt-6 text-center text-gray-500 text-sm">
+            By: NexusCode Evolution
+          </p>
+        </div>
+      </div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
