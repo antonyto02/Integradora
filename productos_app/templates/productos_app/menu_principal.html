@@ -15,29 +15,30 @@
       class="w-full h-64 bg-cover bg-center"
       style="background-image: url('https://i.postimg.cc/MHsfYQ37/pancho.png')"
     >
-
-        <form method="POST" class="p-5" action="{% url 'logout' %}">
-            {% csrf_token %}
-            <img
+          <img
           src="https://i.postimg.cc/Hk0Z17bJ/logopng2.png"
           alt="La Barbacha"
-          class="max-w-[170px]"
-        />
-        </form>
-
-      <div
-        class="absolute top-2 right-2 cursor-pointer transform hover:translate-y-1"
-      >
-        <img
-          src="https://i.postimg.cc/yNG8SS4L/Logout.png"
-          alt="Log Out Icon"
-          class="w-9 h-9"
+          class="max-w-[70px]"
         />
       </div>
+      <div
+        class="absolute top-2 right-2 cursor-pointer transform hover:translate-y-1"
+        onclick="logout()"
+      >
+
+        <form method="POST" action="{% url 'logout' %}"
+            class="absolute top-2 right-2 cursor-pointer transform hover:translate-y-1"
+        >
+            <img
+            src="https://i.postimg.cc/yNG8SS4L/Logout.png"
+            alt="Log Out Icon"
+            class="w-9 h-9"
+            />
+        </form>
     </div>
 
     <!-- Título principal -->
-    <div class="text-center mt-10">
+    <div class="text-center mt-10 text-[#D07E0E]">
       <h1 class="text-4xl font-serif text-[#D07E0E]">
         ¡Me gusta hasta pa' morirme!
       </h1>
@@ -47,19 +48,19 @@
     <main class="container mx-auto ">
         <div class="flex justify-center gap-24 flex-wrap mt-5">
           <!-- Tarjeta de Productos -->
-          <div class="flex justify-center card onclick=redirectTo('{% url 'productos' %}')">
+          <div class="flex justify-center card" href="{% url 'productos' %}"">
             <img src="https://i.postimg.cc/Z5SGVPhW/food.png" alt="Productos" class="w-30 mb-4" />
             <p class="text-lg font-bold text-[#734f2b] font-jura">PRODUCTOS</p>
           </div>
       
           <!-- Tarjeta de Empleados -->
-          <div class="flex justify-center card onclick=redirectTo('{% url 'empleados' %}')">
+          <div class="flex justify-center card" href="{% url 'empleados' %}">
             <img src="https://i.postimg.cc/B6rYtsSj/personas.png" alt="Empleados" class="w-30 mb-4" />
             <p class="text-lg font-bold text-[#734f2b] font-jura">EMPLEADOS</p>
           </div>
       
           <!-- Tarjeta de Proveedores -->
-          <div class="flex justify-center card onclick=redirectTo('{% url 'proveedores' %}')">
+          <div class="flex justify-center card" href="{% url 'proveedores' %}">
             <img src="https://i.postimg.cc/GpnZgFwB/camion.png" alt="Proveedores" class="w-30 mb-4" />
             <p class="text-lg font-bold text-[#734f2b] font-jura">PROVEEDORES</p>
           </div>
