@@ -8,6 +8,9 @@
 <body>
     <h1>Bienvenido</h1>
     <p>¡Has iniciado sesión exitosamente!</p>
+    <a href="{% url 'productos' %}">Productos</a>
+    <a href="{% url 'empleados' %}">Empleados</a>
+    <a href="{% url 'proveedores' %}">Proveedres</a>
     <form method="POST" action="{% url 'logout' %}">
         {% csrf_token %}
         <button type="submit">Cerrar sesión</button>
