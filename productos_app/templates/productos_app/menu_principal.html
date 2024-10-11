@@ -20,6 +20,11 @@
       href="https://fonts.googleapis.com/css2?family=Bevan:ital@0;1&family=Jura:wght@300..700&display=swap"
       rel="stylesheet"
     />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bevan:ital@0;1&family=Jura:wght@300..700&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
+      rel="stylesheet"
+    />
+
     <link rel="stylesheet" href="{% static 'css/style.css' %}" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   </head>
@@ -65,14 +70,14 @@
       <!-- Tarjeta de Productos -->
       <a href="{% url 'submenus' 'productos' %}">
         <div
-          class="card w-full sm:p-2 md:p-4 lg:p-8 flex flex-col items-center text-center"
+          class="card w-full sm:p-2 md:p-4 lg:p-8 xl:p-16 flex flex-col items-center text-center"
         >
           <img
             src="https://i.postimg.cc/Z5SGVPhW/food.png"
             alt="Productos"
             class="w-40 h-auto mb-4"
           />
-          <p class="text-lg text-[#734f2b] font-jura">PRODUCTOS</p>
+          <p class="text-lg text-[#734f2b] roboto-mono">PRODUCTOS</p>
         </div>
       </a>
       <!-- Tarjeta de Empleados -->
@@ -85,7 +90,7 @@
             alt="Empleados"
             class="w-40 h-auto mb-4"
           />
-          <p class="text-lg text-[#734f2b] font-jura">EMPLEADOS</p>
+          <p class="text-lg text-[#734f2b] roboto-mono">EMPLEADOS</p>
         </div>
       </a>
       <!-- Tarjeta de Proveedores -->
@@ -98,7 +103,7 @@
             alt="Proveedores"
             class="w-40 h-auto mb-4"
           />
-          <p class="text-lg text-[#734f2b] font-jura">PROVEEDORES</p>
+          <p class="text-lg text-[#734f2b] roboto-mono">PROVEEDORES</p>
         </div>
       </a>
     </div>

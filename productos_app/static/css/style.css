@@ -44,3 +44,10 @@
 .logout-icon:hover {
   transform: translateY(3px);
 }
+
+.roboto-mono {
+  font-family: "Roboto Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: normal;
+}
