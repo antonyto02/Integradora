@@ -1,18 +1,18 @@
-const togglePassword = document.querySelector("#togglePassword");
-const password = document.querySelector("#password");
-const eyeIcon = document.querySelector("#eyeIcon");
+document.addEventListener("DOMContentLoaded", function () {
+  const togglePassword = document.querySelector('#togglePassword');
+  const passwordField = document.querySelector('#{{ form.password.id_for_label }}');
+  const eyeIcon = document.querySelector('#eyeIcon');
 
-togglePassword.addEventListener("click", function (e) {
-  // Toggle the type attribute
-  const type =
-    password.getAttribute("type") === "password" ? "text" : "password";
-  password.setAttribute("type", type);
+  togglePassword.addEventListener('click', function () {
+      // Alternar el tipo de input entre password y text
+      const type = passwordField.getAttribute('type') === 'password' ? 'text' : 'password';
+      passwordField.setAttribute('type', type);
 
-  // Toggle the eye icon
-  eyeIcon.setAttribute(
-    "d",
-    type === "password"
-      ? "M10 3C6 3 2.73 5.11 1.14 8.25a1 1 0 000 .77C2.73 12.89 6 15 10 15c4 0 7.27-2.11 8.86-5.25a1 1 0 000-.77C17.27 5.11 14 3 10 3zM10 13a3 3 0 110-6 3 3 0 010 6zm0-4a1 1 0 100 2 1 1 0 000-2z"
-      : "M10 3C6 3 2.73 5.11 1.14 8.25a1 1 0 000 .77C2.73 12.89 6 15 10 15c4 0 7.27-2.11 8.86-5.25a1 1 0 000-.77C17.27 5.11 14 3 10 3zM10 13a3 3 0 110-6 3 3 0 010 6zm0-4a1 1 0 100 2 1 1 0 000-2z"
-  );
+      // Alternar el ícono del ojo (opcional)
+      if (type === 'password') {
+          eyeIcon.setAttribute('d', 'M10 3C6.13 3 2.61 5.92 1 9.5c1.61 3.58 5.13 6.5 9 6.5s7.39-2.92 9-6.5C17.39 5.92 13.87 3 10 3zM10 12c-1.11 0-2-.89-2-2s.89-2 2-2 2 .89 2 2-.89 2-2 2zm0-10C6.13 2 2.61 4.92 1 8.5c1.61 3.58 5.13 6.5 9 6.5s7.39-2.92 9-6.5C17.39 4.92 13.87 2 10 2z');
+      } else {
+          eyeIcon.setAttribute('d', 'M10 3C6.13 3 2.61 5.92 1 9.5c1.61 3.58 5.13 6.5 9 6.5s7.39-2.92 9-6.5C17.39 5.92 13.87 3 10 3zM10 12c-1.11 0-2-.89-2-2s.89-2 2-2 2 .89 2 2-.89 2-2 2zM1 9.5c1.61 3.58 5.13 6.5 9 6.5s7.39-2.92 9-6.5c-1.61-3.58-5.13-6.5-9-6.5S2.61 5.92 1 9.5z');
+      }
+  });
 });
