@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="opciones-container">
+        {% for opcion in opciones %}
+          <div class="opcion-item">
+            <img src="{{ opcion.link }}" alt="{{ opcion.opcion }}" class="opcion-imagen">
+            <div class="opcion-titulo">
+              {{ opcion.opcion }}
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+</body>
+</html>
