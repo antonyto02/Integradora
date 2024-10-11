@@ -1,20 +1,133 @@
+{% load static%}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link
+      rel="icon"
+      href="https://i.postimg.cc/Hk0Z17bJ/logopng2.png"
+      type="image/x-icon"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bevan:ital@0;1&family=Jura:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
 </head>
-<body>
-    <div class="opciones-container">
-        {% for opcion in opciones %}
-          <div class="opcion-item">
-            <img src="{{ opcion.link }}" alt="{{ opcion.opcion }}" class="opcion-imagen">
-            <div class="opcion-titulo">
-              {{ opcion.opcion }}
-            </div>
-          </div>
-        {% endfor %}
-      </div>
+
+<body class="bg-gray-100">
+  <!-- Banner superior -->
+  <div
+    class="w-full h-[30%] bg-cover bg-center"
+    style="background-image: url('https://i.postimg.cc/MHsfYQ37/pancho.png')"
+  >
+          <img
+          src="https://i.postimg.cc/Hk0Z17bJ/logopng2.png"
+          alt="La Barbacha"
+          class="w-60"
+          />
+
+          <form id="logout-form" method="POST" action="{% url 'logout' %}" class="absolute top-2 right-2 cursor-pointer">
+              {% csrf_token %}
+              <img
+                  src="https://i.postimg.cc/yNG8SS4L/Logout.png"
+                  alt="Log Out Icon"
+                  class="w-9 h-9 logout-icon"
+                  onclick="document.getElementById('logout-form').submit();" 
+              />
+          </form>
+  </div>
+
+  <!-- Título principal -->
+  <div class="text-center mt-10 text-[#D07E0E]">
+    <h1 class="text-4xl font-serif color_prin">
+      ¡Me gusta hasta pa' morirme!
+    </h1>
+  </div>
+
+ <!-- Contenedor de botones -->
+  <main class="container mx-auto h-[70%] ">
+    <div class="flex justify-center gap-20 mt-5">
+      {% for opcion in opciones %}
+        <div class="card w-50 flex flex-col items-center text-center">
+          <img src="{{ opcion.link }}" alt="{{ opcion.opcion }}" class="w-40 mb-4">
+          <p class="text-lg text-[#734f2b] font-jura">
+            {{ opcion.opcion }}
+          </p>
+        </div>
+      {% endfor %}
+    </div>
+  </main>
+
+    
+  </div>
 </body>
 </html>
+<style>
+  @media (max-width: 768px) {
+.container {
+  flex-direction: column;
+  align-items: center;
+}
+}
+.card {
+background-color: #fff;
+border-radius: 15px;
+box-shadow: 0px 0px 10px rgb(0, 0, 0);
+padding: 35px;
+text-align: center;
+cursor: pointer;
+transition: transform 0.3s;
+border: 0.4px solid #7b281c;
+font-family: "Jura", sans-serif;
+}
+
+.card:hover {
+transform: translateY(-10px);
+}
+
+.card img {
+max-width: 120px;
+margin-bottom: 10px;
+}
+
+.card p {
+font-size: 1.2rem;
+font-weight: bold;
+color: #734f2b;
+}
+
+.color_prin {
+margin: 20px 0;
+font-size: 3rem;
+color: #d07e0e;
+font-family: "Times New Roman", Times, serif, sans-serif;
+text-shadow: -2px 2px 15px rgba(83, 83, 83, 0.782);
+}
+.font-jura {
+                font-family: "Jura", sans-serif;
+              }
+
+.logout-icon:hover {
+transform: translateY(3px);
+}
+
+</style>
+
+
+
+
+
+
+
+
+
+
+
