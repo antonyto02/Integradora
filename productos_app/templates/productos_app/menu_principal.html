@@ -44,7 +44,7 @@
     <main class="container mx-auto ">
         <div class="flex justify-center gap-20 mt-5">
             <!-- Tarjeta de Productos -->
-            <a href="{% url 'productos' %}">
+            <a href="{% url 'submenus' 'productos' %}">
                 <div class="card w-50 flex flex-col items-center text-center">
                     <img src="https://i.postimg.cc/Z5SGVPhW/food.png" alt="Productos" class="w-40 mb-4" />
                     <p class="text-lg text-[#734f2b] font-jura">PRODUCTOS</p>
@@ -52,7 +52,7 @@
             </a>
             
             <!-- Tarjeta de Empleados -->
-            <a href="{% url 'empleados' %}">
+            <a href="{% url 'submenus' 'empleados' %}">
                 <div class="card w-50 flex flex-col items-center text-center">
                     <img src="https://i.postimg.cc/B6rYtsSj/personas.png" alt="Empleados" class="w-40 mb-4" />
                     <p class="text-lg text-[#734f2b] font-jura">EMPLEADOS</p>
