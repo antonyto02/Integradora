@@ -25,7 +25,7 @@ def submenus(request, categoria):
         context = {
             "opciones": [
                 {"opcion": "Mostrar todo", "link": "https://i.postimg.cc/W4nM5tBk/seleccionar-todo-1.png"},
-                {"opcion": "Cocina", "link": "link2"},
+                {"opcion": "Cocina", "link": "https://i.postimg.cc/6QnJcnb6/camarero.png"},
                 {"opcion": "Mesero", "link": "link3"},
                 {"opcion": "RH", "link": "link4"},
                 {"opcion": "Recepcionista", "link": "link5"},
