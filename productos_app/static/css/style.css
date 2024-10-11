@@ -26,7 +26,7 @@
 }
 
 .card p {
-  font-size: 1.2rem;
+  font-size: 1.8rem;
   color: #734f2b;
 }
 
@@ -47,7 +47,5 @@
 
 .roboto-mono {
   font-family: "Roboto Mono", monospace;
-  font-optical-sizing: auto;
   font-weight: 900;
-  font-style: normal;
 }
