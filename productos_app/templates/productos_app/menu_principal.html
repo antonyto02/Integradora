@@ -20,6 +20,7 @@
       href="https://fonts.googleapis.com/css2?family=Bevan:ital@0;1&family=Jura:wght@300..700&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   </head>
   <body class="bg-gray-100">
@@ -59,12 +60,12 @@
 
     <!-- Contenedor de botones -->
     <div
-      class="container mx-auto h-[70%] flex flex-wrap justify-center gap-5 mt-5"
+      class="container mx-auto h-[70%] flex flex-wrap justify-center gap-20 mt-5"
     >
       <!-- Tarjeta de Productos -->
       <a href="{% url 'submenus' 'productos' %}">
         <div
-          class="card w-full sm:w-1/2 lg:w-1/2 flex flex-col items-center text-center"
+          class="card w-full sm:p-2 md:p-4 lg:p-8 flex flex-col items-center text-center"
         >
           <img
             src="https://i.postimg.cc/Z5SGVPhW/food.png"
@@ -77,7 +78,7 @@
       <!-- Tarjeta de Empleados -->
       <a href="{% url 'submenus' 'empleados' %}">
         <div
-          class="card w-full sm:w-1/2 lg:w-1/4 flex flex-col items-center text-center"
+          class="card w-full sm:p-2 md:p-4 lg:p-8 flex flex-col items-center text-center"
         >
           <img
             src="https://i.postimg.cc/B6rYtsSj/personas.png"
@@ -90,7 +91,7 @@
       <!-- Tarjeta de Proveedores -->
       <a href="{% url 'proveedores' %}">
         <div
-          class="card w-full sm:w-1/2 lg:w-1/4 flex flex-col items-center text-center"
+          class="card w-full sm:p-2 md:p-4 lg:p-8 flex flex-col items-center text-center"
         >
           <img
             src="https://i.postimg.cc/GpnZgFwB/camion.png"
@@ -103,52 +104,3 @@
     </div>
   </body>
 </html>
-<style>
-  @media (max-width: 100%) {
-    .container {
-      flex-direction: column;
-      align-items: center;
-    }
-  }
-  .card {
-    background-color: #fff;
-    border-radius: 15px;
-    box-shadow: 0px 0px 10px rgb(0, 0, 0);
-    padding: 35px;
-    text-align: center;
-    cursor: pointer;
-    transition: transform 0.3s;
-    border: 0.4px solid #7b281c;
-    font-family: "Jura", sans-serif;
-  }
-
-  .card:hover {
-    transform: translateY(-10px);
-  }
-
-  .card img {
-    max-width: 120px;
-    margin-bottom: 10px;
-  }
-
-  .card p {
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: #734f2b;
-  }
-
-  .color_prin {
-    margin: 20px 0;
-    font-size: 3rem;
-    color: #d07e0e;
-    font-family: "Times New Roman", Times, serif, sans-serif;
-    text-shadow: -2px 2px 15px rgba(83, 83, 83, 0.782);
-  }
-  .font-jura {
-    font-family: "Jura", sans-serif;
-  }
-
-  .logout-icon:hover {
-    transform: translateY(3px);
-  }
-</style>
