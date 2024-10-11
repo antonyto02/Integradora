@@ -12,7 +12,7 @@ def submenus(request, categoria):
     if categoria == "productos":
         context = {
             "opciones": [
-                {"opcion": "Mostrar todo", "link": "link1"},
+                {"opcion": "Mostrar todo", "link": "https://i.postimg.cc/W4nM5tBk/seleccionar-todo-1.png"},
                 {"opcion": "Limpieza", "link": "https://i.postimg.cc/vHrWxFgS/productos.png"},
                 {"opcion": "Insumos", "link": "https://i.postimg.cc/cJ2t60Wj/comida.png"},
                 {"opcion": "Desechables", "link": "https://i.postimg.cc/qq2s49Hn/contenedor-de-comida.png"},
@@ -24,8 +24,8 @@ def submenus(request, categoria):
     elif categoria=="empleados":
         context = {
             "opciones": [
-                {"opcion": "Mostrar todo", "link": ""},
-                {"opcion": "Cocina", "link": "link2"},
+                {"opcion": "Mostrar todo", "link": "https://i.postimg.cc/W4nM5tBk/seleccionar-todo-1.png"},
+                {"opcion": "Cocina", "link": "https://i.postimg.cc/6QnJcnb6/camarero.png"},
                 {"opcion": "Mesero", "link": "link3"},
                 {"opcion": "RH", "link": "link4"},
                 {"opcion": "Recepcionista", "link": "link5"},

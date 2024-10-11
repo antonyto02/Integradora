@@ -58,44 +58,48 @@
     </div>
 
     <!-- Contenedor de botones -->
-    <div class="container mx-auto h-[70%]">
-      <div flex-col class="flex justify-center gap-20 mt-5">
-        <!-- Tarjeta de Productos -->
-        <a href="{% url 'submenus' 'productos' %}">
-          <div class="card w-50 flex flex-col items-center text-center">
-            <img
-              src="https://i.postimg.cc/Z5SGVPhW/food.png"
-              alt="Productos"
-              class="w-[80] mb-4"
-            />
-            <p class="text-lg text-[#734f2b] font-jura">PRODUCTOS</p>
-          </div>
-        </a>
-
-        <!-- Tarjeta de Empleados -->
-        <a href="{% url 'submenus' 'empleados' %}">
-          <div class="card w-50 flex flex-col items-center text-center">
-            <img
-              src="https://i.postimg.cc/B6rYtsSj/personas.png"
-              alt="Empleados"
-              class="w-40 mb-4"
-            />
-            <p class="text-lg text-[#734f2b] font-jura">EMPLEADOS</p>
-          </div>
-        </a>
-
-        <!-- Tarjeta de Proveedores -->
-        <a href="{% url 'proveedores' %}">
-          <div class="card w-50 flex flex-col items-center text-center">
-            <img
-              src="https://i.postimg.cc/GpnZgFwB/camion.png"
-              alt="Proveedores"
-              class="w-40 mb-4"
-            />
-            <p class="text-lg text-[#734f2b] font-jura">PROVEEDORES</p>
-          </div>
-        </a>
-      </div>
+    <div
+      class="container mx-auto h-[70%] flex flex-wrap justify-center gap-5 mt-5"
+    >
+      <!-- Tarjeta de Productos -->
+      <a href="{% url 'submenus' 'productos' %}">
+        <div
+          class="card w-full sm:w-1/2 lg:w-1/2 flex flex-col items-center text-center"
+        >
+          <img
+            src="https://i.postimg.cc/Z5SGVPhW/food.png"
+            alt="Productos"
+            class="w-40 h-auto mb-4"
+          />
+          <p class="text-lg text-[#734f2b] font-jura">PRODUCTOS</p>
+        </div>
+      </a>
+      <!-- Tarjeta de Empleados -->
+      <a href="{% url 'submenus' 'empleados' %}">
+        <div
+          class="card w-full sm:w-1/2 lg:w-1/4 flex flex-col items-center text-center"
+        >
+          <img
+            src="https://i.postimg.cc/B6rYtsSj/personas.png"
+            alt="Empleados"
+            class="w-40 h-auto mb-4"
+          />
+          <p class="text-lg text-[#734f2b] font-jura">EMPLEADOS</p>
+        </div>
+      </a>
+      <!-- Tarjeta de Proveedores -->
+      <a href="{% url 'proveedores' %}">
+        <div
+          class="card w-full sm:w-1/2 lg:w-1/4 flex flex-col items-center text-center"
+        >
+          <img
+            src="https://i.postimg.cc/GpnZgFwB/camion.png"
+            alt="Proveedores"
+            class="w-40 h-auto mb-4"
+          />
+          <p class="text-lg text-[#734f2b] font-jura">PROVEEDORES</p>
+        </div>
+      </a>
     </div>
   </body>
 </html>
