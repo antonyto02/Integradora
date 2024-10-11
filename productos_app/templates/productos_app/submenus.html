@@ -6,6 +6,15 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <div class="opciones-container">
+        {% for opcion in opciones %}
+          <div class="opcion-item">
+            <img src="{{ opcion.link }}" alt="{{ opcion.opcion }}" class="opcion-imagen">
+            <div class="opcion-titulo">
+              {{ opcion.opcion }}
+            </div>
+          </div>
+        {% endfor %}
+      </div>
 </body>
 </html>
