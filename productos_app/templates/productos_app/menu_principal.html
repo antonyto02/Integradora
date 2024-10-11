@@ -43,27 +43,28 @@
     <main class="container mx-auto ">
         <div class="flex justify-center gap-20 flex-wrap mt-5">
           <!-- Tarjeta de Productos -->
-          <div class="card w-50">
-            <a href="{% url 'productos' %}"></a>
-            <img src="https://i.postimg.cc/Z5SGVPhW/food.png" alt="Productos" class="w-40 mb-4 flex justify-center" />
-            <p class="text-lg text-[#734f2b] font-jura">PRODUCTOS</p>
-          </div>
-      
+           <a href="{% url 'productos' %}">
+                <div class="card w-50">
+                    <img src="https://i.postimg.cc/Z5SGVPhW/food.png" alt="Productos" class="w-40 mb-4 flex justify-center" />
+                    <p class="text-lg text-[#734f2b] font-jura">PRODUCTOS</p>
+                </div>
+            </a>
           <!-- Tarjeta de Empleados -->
-
-          <div class="card w-50" >
-            <a href="{% url 'empleados' %}"></a>
-            <img src="https://i.postimg.cc/B6rYtsSj/personas.png" alt="Empleados" class="w-40 mb-4" />
-            <p class="text-lg text-[#734f2b] font-jura">EMPLEADOS</p>
-          </div>
+            <a href="{% url 'empleados' %}">
+            <div class="card w-50" >
+                <img src="https://i.postimg.cc/B6rYtsSj/personas.png" alt="Empleados" class="w-40 mb-4" />
+                <p class="text-lg text-[#734f2b] font-jura">EMPLEADOS</p>
+            </div>
+            </a>
       
           <!-- Tarjeta de Proveedores -->
-          <div class="card w-50">
-            <a href="{% url 'proveedores' %}"></a>
-            <img src="https://i.postimg.cc/GpnZgFwB/camion.png" alt="Proveedores" class="w-35 mb-4" />
-            <p class="text-lg text-[#734f2b] font-jura bg-center">PROVEEDORES</p>
-          </div>
-        </div>
+           <a href="{% url 'proveedores' %}">
+                <div class="card w-50 bg-center">
+                    <img src="https://i.postimg.cc/GpnZgFwB/camion.png" alt="Proveedores" class="w-35 mb-4 bg-center" />
+                    <p class="text-lg text-[#734f2b] font-jura bg-center">PROVEEDORES</p>
+                </div>
+            </a>
+        </div>
       </main>
       
     </div>
