@@ -43,21 +43,25 @@
     <main class="container mx-auto ">
         <div class="flex justify-center gap-20 flex-wrap mt-5">
           <!-- Tarjeta de Productos -->
-          <div class="card w-50" href="{% url 'productos' %}"">
+          <div class="card w-50">
+            <a href="{% url 'productos' %}"></a>
             <img src="https://i.postimg.cc/Z5SGVPhW/food.png" alt="Productos" class="w-40 mb-4 flex justify-center" />
             <p class="text-lg text-[#734f2b] font-jura">PRODUCTOS</p>
           </div>
       
           <!-- Tarjeta de Empleados -->
-          <div class="card w-50" href="{% url 'empleados' %}">
-            <img src="https://i.postimg.cc/B6rYtsSj/personas.png" alt="Empleados" class="w-40 mb-4 flex justify-center" />
+
+          <div class="card w-50" >
+            <a href="{% url 'empleados' %}"></a>
+            <img src="https://i.postimg.cc/B6rYtsSj/personas.png" alt="Empleados" class="w-40 mb-4" />
             <p class="text-lg text-[#734f2b] font-jura">EMPLEADOS</p>
           </div>
       
           <!-- Tarjeta de Proveedores -->
-          <div class="card w-50" href="{% url 'proveedores' %}">
-            <img src="https://i.postimg.cc/GpnZgFwB/camion.png" alt="Proveedores" class="w-35 mb-4 flex justify-center" />
-            <p class="text-lg text-[#734f2b] font-jura">PROVEEDORES</p>
+          <div class="card w-50">
+            <a href="{% url 'proveedores' %}"></a>
+            <img src="https://i.postimg.cc/GpnZgFwB/camion.png" alt="Proveedores" class="w-35 mb-4" />
+            <p class="text-lg text-[#734f2b] font-jura bg-center">PROVEEDORES</p>
           </div>
         </div>
       </main>
