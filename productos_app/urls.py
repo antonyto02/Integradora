@@ -9,6 +9,10 @@ urlpatterns = [
     path('login/', auth_views.LoginView.as_view(template_name='productos_app/login.html'), name='login'),
     path('menu_principal/', views.menu_principal, name='menu_principal'),
     path('<str:categoria>/', views.submenus, name="submenus"),
+    path('<str:subcategoria>/', views.tablas, name="tabla"),
+
+
+
     path('proveedores/', views.proveedores, name='proveedores'),
 ]
 
