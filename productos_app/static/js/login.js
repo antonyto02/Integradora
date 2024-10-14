@@ -20,4 +20,3 @@ togglePassword.addEventListener("click", function () {
     ); // Ícono para mostrar
   }
 });
-//hola
