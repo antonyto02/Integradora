@@ -6,14 +6,14 @@ def menu_principal(request):
     return render(request, 'productos_app/menu_principal.html')
 
 @login_required
-def submenus(request, categoria):
+def submenus(request, nombre):
     context = {}
 
-    if categoria == "productos":
+    if nombre == "productos":
         context = {
             "opciones": [
                 {"pantalla":"1","opcion": "MOSTRAR TODO", "link": "https://i.postimg.cc/W4nM5tBk/seleccionar-todo-1.png"},
-                {"pantalla": "2","opcion":"LIMPIEZA", "link": "https://i.postimg.cc/vHrWxFgS/productos.png"},
+                {"pantalla":"2","opcion":"LIMPIEZA", "link": "https://i.postimg.cc/vHrWxFgS/productos.png"},
                 {"pantalla":"3","opcion": "INSUMOS", "link": "https://i.postimg.cc/qBcLyTyC/comida-1.png"},
                 {"pantalla":"4","opcion": "DESECHABLES", "link": "https://i.postimg.cc/qq2s49Hn/contenedor-de-comida.png"},
                 {"pantalla":"5","opcion": "LOZA", "link": "https://i.postimg.cc/tg6nZJ56/vajilla.png"},
@@ -21,7 +21,7 @@ def submenus(request, categoria):
             ]
         }
         
-    elif categoria=="empleados":
+    elif nombre=="empleados":
         context = {
             "opciones": [
                 {"pantalla":"6","opcion": "MOSTRAR TODO", "link": "https://i.postimg.cc/W4nM5tBk/seleccionar-todo-1.png"},
@@ -36,50 +36,50 @@ def submenus(request, categoria):
     return render(request, 'productos_app/submenus.html', context)
 
 @login_required
-def tablas(request, subcategoria):
+def tablas(request, nombre):
     context = {}
-    if subcategoria=="1":
+    if nombre=="1":
         context = {
             "titulo":"Mostrar todo"
         }
-    elif subcategoria=="2":
+    elif nombre=="2":
         context = {
             "titulo":"Limpieza"
         }
-    elif subcategoria=="3":
+    elif nombre=="3":
         context = {
             "titulo":"Insumos"
         }
-    elif subcategoria=="4":
+    elif nombre=="4":
         context = {
             "titulo":"Desechables"
         }
-    elif subcategoria=="5":
+    elif nombre=="5":
         context = {
             "titulo":"Loza"
         }
-    elif subcategoria=="6":
+    elif nombre=="6":
         context = {
             "titulo":"Mostrar todo"
         }
-    elif subcategoria=="7":
+    elif nombre=="7":
         context = {
             "titulo":"Cocina"
         }
-    elif subcategoria=="8":
+    elif nombre=="8":
         context = {
             "titulo":"Mesero"
         }
-    elif subcategoria=="9":
+    elif nombre=="9":
         context = {
             "titulo":"RH"
         }
-    elif subcategoria=="10":
+    elif nombre=="10":
         context = {
             "titulo":"Recepcionista"
         }
 
-    return render(request, 'productos_app/tablas.html', context)
+    return render(request, 'productos_app/tablita.html', context)
 
 
 @login_required
