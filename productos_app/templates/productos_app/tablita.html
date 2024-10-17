@@ -1,0 +1,273 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="icon"
+      href="https://i.postimg.cc/Hk0Z17bJ/logopng2.png"
+      type="image/x-icon"
+    />
+    <link
+      rel="icon"
+      ++++
+      href="https://i.postimg.cc/Hk0Z17bJ/logopng2.png"
+      type="image/x-icon"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bevan:ital@0;1&family=Jura:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+  </head>
+  <body>
+    <!-- Banner superior -->
+    <div
+      class="encabezado w-full h-[30%] bg-cover bg-center"
+      style="background-image: url('https://i.postimg.cc/MHsfYQ37/pancho.png')"
+    >
+      <div class="absolute top-4 left-4">
+        <a href="{% url 'menu_principal' %}">
+          <img
+            src="https://i.postimg.cc/Hk0Z17bJ/logopng2.png"
+            alt="La Barbacha"
+            class="w-60"
+          />
+        </a>
+      </div>
+
+      <form
+        id="logout-form"
+        method="POST"
+        action="{% url 'logout' %}"
+        class="absolute top-2 right-2 cursor-pointer"
+      >
+        {% csrf_token %}
+        <img
+          src="https://i.postimg.cc/yNG8SS4L/Logout.png"
+          alt="Log Out Icon"
+          class="w-9 h-9 logout-icon"
+          onclick="document.getElementById('logout-form').submit();"
+        />
+      </form>
+      <nav>
+        <ul>
+          <li class="cursor-pointer">
+            <a href="{% url 'menu_principal' %}">INICIO</a>
+          </li>
+          <li class="cursor-pointer">
+            <a href="{% url 'submenus' 'productos' %}">PRODUCTOS</a>
+          </li>
+          <li class="cursor-pointer">
+            <a href="{% url 'submenus' 'empleados' %}">EMPLEADOS</a>
+          </li>
+          <li class="cursor-pointer"><a href="#Contacto">PROVEEDORES</a></li>
+        </ul>
+      </nav>
+    </div>
+    <!-- Main Section -->
+    <main class="container mx-auto mt-8">
+      <div class="flex justify-between mb-4">
+        <!-- Action buttons -->
+        <div class="flex space-x-4 mb-4">
+          <button
+            class="flex items-center px-4 py-2 bg-green-500 text-white rounded-md hover:bg-green-600"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="2"
+              stroke="currentColor"
+              class="w-5 h-5 mr-2"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M12 4.75v14.5m7.75-7.25H4.25"
+              />
+            </svg>
+            Añadir
+          </button>
+          <button
+            class="flex items-center px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="2"
+              stroke="currentColor"
+              class="w-5 h-5 mr-2"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M16.25 7.75l-8.5 8.5m0-8.5l8.5 8.5"
+              />
+            </svg>
+            Editar
+          </button>
+          <button
+            class="flex items-center px-4 py-2 bg-red-500 text-white rounded-md hover:bg-red-600"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="2"
+              stroke="currentColor"
+              class="w-5 h-5 mr-2"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M6 18L18 6M6 6l12 12"
+              />
+            </svg>
+            Eliminar
+          </button>
+        </div>
+        <h2 class="text-2xl font-semibold position-center">Todos</h2>
+        <div class="flex items-center">
+          <input
+            type="text"
+            placeholder="Buscar"
+            class="border border-gray-300 rounded-md px-4 py-2"
+          />
+          <button class="ml-2 px-4 py-2 bg-gray-700 text-white rounded-md">
+            🔍
+          </button>
+        </div>
+      </div>
+
+      <!-- Table -->
+      <div class="bg-white shadow-md rounded-lg overflow-hidden">
+        <table class="min-w-full">
+          <thead class="bg-gray-200">
+            <tr>
+              <th
+                class="px-6 py-3 text-left text-sm font-medium text-gray-700 uppercase tracking-wider"
+              >
+                Nombre
+              </th>
+              <th
+                class="px-6 py-3 text-left text-sm font-medium text-gray-700 uppercase tracking-wider"
+              >
+                Stock
+              </th>
+              <th class="px-6 py-3"></th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Row 1 -->
+            <tr class="bg-white border-b hover:bg-gray-100">
+              <td class="px-6 py-4 whitespace-nowrap">
+                <div class="flex items-center">
+                  <input type="radio" name="product" class="mr-3" />
+                  <span class="text-sm font-medium text-gray-900"
+                    >Ejemplo 1</span
+                  >
+                </div>
+              </td>
+              <td
+                class="px-6 py-4 whitespace-nowrap flex items-center text-sm text-gray-500"
+              >
+                Stock
+              </td>
+              <td
+                class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium"
+              >
+                <button class="text-blue-500 hover:text-blue-600 mx-2">
+                  ➕
+                </button>
+                <button class="text-red-500 hover:text-red-600 mx-2">➖</button>
+                <button class="text-gray-500 hover:text-gray-600 mx-2">
+                  ℹ️
+                </button>
+              </td>
+            </tr>
+
+            <!-- Row 2 -->
+            <tr class="bg-white border-b hover:bg-gray-100">
+              <td class="px-6 py-4 whitespace-nowrap">
+                <div class="flex items-center">
+                  <input type="radio" name="product" class="mr-3" />
+                  <span class="text-sm font-medium text-gray-900"
+                    >Ejemplo 2</span
+                  >
+                </div>
+              </td>
+              <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                Stock
+              </td>
+              <td
+                class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium"
+              >
+                <button class="text-blue-500 hover:text-blue-600 mx-2">
+                  ➕
+                </button>
+                <button class="text-red-500 hover:text-red-600 mx-2">➖</button>
+                <button class="text-gray-500 hover:text-gray-600 mx-2">
+                  ℹ️
+                </button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </main>
+  </body>
+</html>
+<style>
+  .nav_trans {
+    transform: translateY(-3px);
+  }
+  nav {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 20px;
+    text-shadow: 1px 1px 2px #0b0b0b6f;
+    position: absolute; /* Posiciona el nav dentro del encabezado */
+    left: 0;
+    width: 100%; /* Asegura que el nav ocupe todo el ancho del contenedor */
+    height: 20%;
+    padding: 15px; /* Ajuste del espacio interior */
+    bottom: 0;
+    z-index: 1; /* Asegura que el nav esté sobre el slider */
+  }
+  nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    background-color: rgb(246, 246, 246, 0.2);
+    padding: 10px;
+  }
+
+  nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+  }
+
+  nav ul li a:hover {
+    background-color: #555;
+  }
+
+  .encabezado {
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    position: relative;
+  }
+</style>
