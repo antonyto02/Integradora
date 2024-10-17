@@ -25,10 +25,10 @@ def submenus(request, nombre):
         context = {
             "opciones": [
                 {"pantalla":"6","opcion": "MOSTRAR TODO", "link": "https://i.postimg.cc/W4nM5tBk/seleccionar-todo-1.png"},
-                {"pantalla":"7","opcion": "COCINA", "link": "https://i.postimg.cc/6QnJcnb6/camarero.png"},
-                {"pantalla":"8","opcion": "MESERO", "link": "link3"},
-                {"pantalla":"9","opcion": "RH", "link": "link4"},
-                {"pantalla":"10","opcion": "RECEPCIONISTA", "link": "link5"},
+                {"pantalla":"7","opcion": "COCINA", "link": "https://i.postimg.cc/bwKtLkVr/chef-masculino.png"},
+                {"pantalla":"8","opcion": "MESERO", "link": "https://i.postimg.cc/6QnJcnb6/camarero.png"},
+                {"pantalla":"9","opcion": "RH", "link": "https://i.postimg.cc/LsnBFVFR/gerente-de-recursos-humanos.png"},
+                {"pantalla":"10","opcion": "RECEPCIONISTA", "link": "https://i.postimg.cc/LX4SshvH/recepcionista.png"},
 
             ]
         }

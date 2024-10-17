@@ -5,17 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>La Barbacha</title>
-    <link
-      rel="icon"
-      href="https://i.postimg.cc/Hk0Z17bJ/logopng2.png"
-      type="image/x-icon"
-    />
-    <link
-      rel="icon"
-      ++++
-      href="https://i.postimg.cc/Hk0Z17bJ/logopng2.png"
-      type="image/x-icon"
-    />
+
     <link
       href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
       rel="stylesheet"
@@ -32,15 +22,18 @@
   <body class="bg-gray-100">
     <!-- Banner superior -->
     <div
-      class="encabezado"
+      class="encabezado w-full h-[30%] bg-cover bg-center"
       style="background-image: url('https://i.postimg.cc/MHsfYQ37/pancho.png')"
     >
-      <img
-        src="https://i.postimg.cc/Hk0Z17bJ/logopng2.png"
-        alt="La Barbacha"
-        class="w-60"
-      />
-
+      <div class="absolute top-4 left-4">
+        <a href="{% url 'menu_principal' %}">
+          <img
+            src="https://i.postimg.cc/Hk0Z17bJ/logopng2.png"
+            alt="La Barbacha"
+            class="w-60"
+          />
+        </a>
+      </div>
       <form
         id="logout-form"
         method="POST"
@@ -57,21 +50,18 @@
       </form>
       <nav>
         <ul>
-          <li class="cursor-pointer"><a href="#inicio">INICIO</a></li>
-          <li class="cursor-pointer"><a href="#Sobre-mi">QUIÉNES SOMOS</a></li>
           <li class="cursor-pointer">
-            <a href="#Galeria-Productos">PRODUCTOS</a>
+            <a href="{% url 'menu_principal' %}">INICIO</a>
           </li>
-          <li class="cursor-pointer"><a href="#Contacto">CONTACTO</a></li>
+          <li class="cursor-pointer">
+            <a href="{% url 'submenus' 'productos' %}">PRODUCTOS</a>
+          </li>
+          <li class="cursor-pointer">
+            <a href="{% url 'submenus' 'empleados' %}">EMPLEADOS</a>
+          </li>
+          <li class="cursor-pointer"><a href="#Contacto">PROVEEDORES</a></li>
         </ul>
       </nav>
-    </div>
-
-    <!-- Título principal -->
-    <div class="text-center mt-10 text-[#D07E0E]">
-      <h1 class="text-4xl font-serif color_prin">
-        ¡Me gusta hasta pa' morirme!
-      </h1>
     </div>
 
     <!-- Contenedor de botones -->
@@ -95,6 +85,7 @@
     </div>
   </body>
 </html>
+
 <style>
   .nav_trans {
     transform: translateY(-3px);
